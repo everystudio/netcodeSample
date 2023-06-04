@@ -154,7 +154,8 @@ PlayerSettings:
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Standalone: com.Anogame.NetcodeSample
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -811,11 +812,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 
+  cloudProjectId: f4b82c1b-1740-45b6-b854-94fa32c8a506
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: 2023-01-06_202301freeasetts
+  organizationId: 0d8d8a0e-076b-4460-8d82-f685255e63ea
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
