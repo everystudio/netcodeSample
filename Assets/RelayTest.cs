@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Unity.Services.Core;
 using Unity.Services.Authentication;
 using Unity.Services.Relay;
@@ -9,7 +7,7 @@ using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
 using TMPro;
 
-public class TestRelay : MonoBehaviour
+public class RelayTest : MonoBehaviour
 {
     [SerializeField] TMP_InputField joinCodeInput;
     private async void Start()
