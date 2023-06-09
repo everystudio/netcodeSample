@@ -1146,7 +1146,7 @@ GameObject:
   - component: {fileID: 1112805092}
   - component: {fileID: 1112805091}
   m_Layer: 0
-  m_Name: TestRelay
+  m_Name: RelayTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

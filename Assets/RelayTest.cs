@@ -26,7 +26,6 @@ public class RelayTest : MonoBehaviour
         try
         {
             Allocation allocation = await RelayService.Instance.CreateAllocationAsync(3);
-
             string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
 
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetHostRelayData(
@@ -38,7 +37,6 @@ public class RelayTest : MonoBehaviour
                 );
 
             Debug.Log(joinCode);
-
             NetworkManager.Singleton.StartHost();
         }
         catch (RelayServiceException e)
@@ -52,7 +50,7 @@ public class RelayTest : MonoBehaviour
         JoinRelay(joinCodeInput.text);
     }
 
-    public async void JoinRelay(string joinCode)
+    private async void JoinRelay(string joinCode)
     {
         try
         {
