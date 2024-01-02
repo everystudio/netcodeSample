@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using Unity.Netcode;
+using System;
 
 public class NetworkManagerUI : MonoBehaviour
 {
@@ -11,11 +12,12 @@ public class NetworkManagerUI : MonoBehaviour
     {
         hostButton.onClick.AddListener(() =>
         {
-            NetworkManager.Singleton.StartHost();
+            NetworkManager.Singleton.StartServer();
         });
         clientButton.onClick.AddListener(() =>
         {
             NetworkManager.Singleton.StartClient();
         });
     }
+
 }
