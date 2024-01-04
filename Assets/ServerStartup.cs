@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using Unity.Netcode;
+using Unity.Netcode.Transports.UTP;
+
 public class ServerStartup : MonoBehaviour
 {
-    private bool isServer = false;
-    private ushort serverPort = 7777;
-    private string externalServerIP = "0.0.0.0";
-    private string externalConnetionString => $"{externalServerIP}:{serverPort}";
+    //private string externalConnetionString => $"{externalServerIP}:{serverPort}";
 
     private void Start()
     {
+        bool isServer = false;
+        ushort serverPort = 7777;
+        string externalServerIP = "0.0.0.0";
+
         var args = System.Environment.GetCommandLineArgs();
         for (int i = 0; i < args.Length; i++)
         {
@@ -27,5 +31,15 @@ public class ServerStartup : MonoBehaviour
                 externalServerIP = args[i + 1];
             }
         }
+        if (isServer)
+        {
+            StartServer(externalServerIP, serverPort);
+        }
+    }
+
+    private void StartServer(string ip, ushort port)
+    {
+        NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(ip, port);
+        NetworkManager.Singleton.StartServer();
     }
 }
